@@ -53,6 +53,7 @@ pip install websocket-client
 
 其中username 为用户名 password 为密码  zone为区服， 执行后就会自动执行帐号区服下所有的角色活跃任务
 
+
 ```
 python demo.py [username] [password] [zone]
 ```
