@@ -407,7 +407,7 @@ class GetLoginCookie:
         return self.u +' '+self.p
     def post(self):
         cookie = cookiejar.CookieJar()
-        post_url='http://game.wsmud.com/UserAPI/Login'
+        post_url='http://www.wamud.com/UserAPI/Login'
         handler = urllib.request.HTTPCookieProcessor(cookie) #创建cookie处理对象
         opener = urllib.request.build_opener(handler) #构建携带cookie的打开方式
         data = {'code':self.username,'pwd':self.password}

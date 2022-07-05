@@ -22,7 +22,7 @@ class GetLoginInfo:
         return json_obj
     def post(self):
         cookie = cookiejar.CookieJar()
-        post_url='http://game.wsmud.com/UserAPI/Login'
+        post_url='http://www.wamud.com/UserAPI/Login'
         handler = urllib.request.HTTPCookieProcessor(cookie) #创建cookie处理对象
         opener = urllib.request.build_opener(handler) #构建携带cookie的打开方式
         data = {'code':self.username,'pwd':self.password}
@@ -35,7 +35,7 @@ class GetLoginInfo:
             if(item.name=='u'):
                 self.u=item.value
     def getServer(self):
-        url = 'http://game.wsmud.com/Game/GetServer'
+        url = 'http://www.wamud.com/Game/GetServer'
         opener = urllib.request.build_opener()
         req = urllib.request.Request(url,method='get')
         res = opener.open(req).read()
