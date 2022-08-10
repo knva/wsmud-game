@@ -37,7 +37,7 @@ class GetLoginInfo:
     def getServer(self):
         url = 'http://www.wamud.com/Game/GetServer'
         opener = urllib.request.build_opener()
-        req = urllib.request.Request(url,method='get')
+        req = urllib.request.Request(url)
         res = opener.open(req).read()
         json = self.convet_json(res)
         for item in json:
